@@ -1,0 +1,12 @@
+superstore:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: dataengineer
+      password: secretpassword
+      port: 5432
+      dbname: superstore
+      schema: public
+      threads: 1

@@ -1,0 +1,14 @@
+name: "superstore"
+version: "1.0.0"
+config-version: 2
+
+profile: "superstore"
+
+models:
+  superstore:
+    bronze:
+      +materialized: view
+    silver:
+      +materialized: table
+    gold:
+      +materialized: table
