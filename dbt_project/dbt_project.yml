@@ -12,3 +12,11 @@ models:
       +materialized: table
     gold:
       +materialized: table
+
+seeds:
+  superstore:
+    +column_types:
+      order_date: DATE
+      unit_price: NUMERIC
+      quantity: INTEGER
+      discount: NUMERIC

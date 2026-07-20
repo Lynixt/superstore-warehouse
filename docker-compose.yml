@@ -19,6 +19,7 @@ services:
     container_name: superstore_dbt
     volumes:
       - ./dbt_project:/usr/app
+      - ./dbt_project/seeds:/usr/app/seeds
     working_dir: /usr/app
     environment:
       DBT_PROFILES_DIR: /usr/app

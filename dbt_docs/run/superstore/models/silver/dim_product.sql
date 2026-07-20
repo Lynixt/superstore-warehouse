@@ -1,0 +1,30 @@
+
+  
+    
+
+  create  table "superstore"."public"."dim_product__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH product_source AS (
+    SELECT DISTINCT
+        product_id,
+        product_name,
+        category,
+        sub_category,
+        unit_price
+    FROM "superstore"."public"."stg_sales"
+)
+
+SELECT
+    product_id,
+    product_name,
+    category,
+    sub_category,
+    unit_price
+FROM product_source
+ORDER BY product_id
+  );
+  
