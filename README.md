@@ -118,6 +118,12 @@ dbt_project/
     └── dbt_test.yml
 ```
 
+## Lineage Graph
+
+![Lineage Graph](lineage_graph.png)
+
+_Visual DAG showing data flow from raw seeds through Bronze (staging), Silver (dimensions), and Gold (fact table)._
+
 ## What I Learned
 
 - Building a star schema from raw data
