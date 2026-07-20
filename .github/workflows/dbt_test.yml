@@ -1,0 +1,26 @@
+name: dbt test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Start services
+        run: docker compose up -d
+
+      - name: Wait for PostgreSQL
+        run: sleep 5
+
+      - name: Run dbt seed
+        run: docker exec superstore_dbt dbt seed
+
+      - name: Run dbt models
+        run: docker exec superstore_dbt dbt run
+
+      - name: Run dbt tests
+        run: docker exec superstore_dbt dbt test
