@@ -22,12 +22,12 @@ A dimensional data warehouse built with dbt and PostgreSQL. Transforms raw sales
 
 ## Star Schema
 
-| Table | Type | Grain | Row Count |
-|-------|------|-------|-----------|
-| `dim_customer` | Dimension | One row per customer | 8 |
-| `dim_product` | Dimension | One row per product | 10 |
-| `dim_date` | Dimension | One row per day | ~1095 |
-| `fct_sales` | Fact | One row per order line | 1000 |
+| Table          | Type      | Grain                  | Row Count |
+| -------------- | --------- | ---------------------- | --------- |
+| `dim_customer` | Dimension | One row per customer   | 8         |
+| `dim_product`  | Dimension | One row per product    | 10        |
+| `dim_date`     | Dimension | One row per day        | ~1095     |
+| `fct_sales`    | Fact      | One row per order line | 1000      |
 
 ## Data Quality
 
@@ -49,17 +49,20 @@ Run tests: `docker exec -it superstore_dbt dbt test`
 ## How to Run
 
 1. Clone the repo
+
    ```
    git clone https://github.com/Lynixt/superstore-warehouse.git
    cd superstore-warehouse
    ```
 
 2. Start the database
+
    ```
    docker compose up -d
    ```
 
 3. Generate sample data and load via dbt seed
+
    ```
    python generate_data.py
    docker compose up -d --build
@@ -67,6 +70,7 @@ Run tests: `docker exec -it superstore_dbt dbt test`
    ```
 
 4. Run dbt
+
    ```
    docker exec -it superstore_dbt dbt run
    docker exec -it superstore_dbt dbt test
