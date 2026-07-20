@@ -59,11 +59,11 @@ Run tests: `docker exec -it superstore_dbt dbt test`
    docker compose up -d
    ```
 
-3. Generate and load sample data
+3. Generate sample data and load via dbt seed
    ```
    python generate_data.py
-   docker cp sales_data.csv superstore_postgres:/sales_data.csv
-   docker exec -it superstore_postgres psql -U dataengineer -d superstore -c "\copy raw_sales FROM '/sales_data.csv' DELIMITER ',' CSV HEADER;"
+   docker compose up -d --build
+   docker exec -it superstore_dbt dbt seed
    ```
 
 4. Run dbt
