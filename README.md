@@ -137,7 +137,10 @@ _Visual DAG showing data flow from raw seeds through Bronze (staging), Silver (d
 
 ## Portfolio
 
-This is Project 2 of 3 in my data engineering portfolio.
+This is Project 1 of 3 in my data engineering portfolio.
 
-- [Project 1: Broken Miner](https://github.com/Lynixt/Broken-Miner) - Airflow, Docker, PostgreSQL, Telegram alerts
-- **Project 2: Superstore Warehouse** - dbt, dimensional modeling, CI/CD
+- **Project 1: Broken Miner** - Airflow, Docker, PostgreSQL, Telegram alerts
+- [Project 2: Superstore Warehouse](https://github.com/Lynixt/superstore-warehouse) - dbt, dimensional modeling, CI/CD
+- [Project 3: Wiki Stream](https://github.com/Lynixt/wiki-stream) - Kafka, Databricks, real-time streaming
+
+[📁 View Full Portfolio](https://github.com/Lynixt/data-engineering-portfolio)
